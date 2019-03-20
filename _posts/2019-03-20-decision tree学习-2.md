@@ -11,6 +11,7 @@ tags: decisionTree ml
 
 # 信息增益的计算
 对于如下数据集（feature为grade， bumpyness，speed limit， label为speed）
+
 | grade | bumpiness | speed limit? | speed |
 | ---- | ---- | ---- | ---- |
 | steep | bumpy | yes | slow |
@@ -70,10 +71,12 @@ information_gain= entropy(node) - entropy(children) = 1.0-0.6888 = 0.3112
 所以：我们应该选择speed limit来作为切分条件。
 
 # 优缺点：
+
 ## 优点：
 - 可解释性好
 - 只需要很少的数据预处理工作。并且能够处理各种类型的特征
 - 原生支持多分类
+
 ## 缺点：
 - 决策树容易过拟合
 - 决策树不稳定，也就是说可能数据集的一个很小的变动就会导致树发生很大的改变。
