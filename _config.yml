@@ -7,7 +7,7 @@
 
 # Site settings
 title: felix
-brief-intro: Front-end Dev Engineer
+brief-intro: linux admin
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://felix0913.github.io" # the base hostname & protocol for your site
 
