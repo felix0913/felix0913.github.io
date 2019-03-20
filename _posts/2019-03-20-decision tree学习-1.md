@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "decision tree学习"
+title:  "decision tree学习-1"
 date:   2019-3-19 16:00
 categories: MachineLearning
 tags: decisionTree ml
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 * content
 {:toc}
@@ -66,24 +65,35 @@ Loop
 - ID3算法是决策树的一种，基于**奥卡姆剃刀原理**，即用尽量少的东西做更多的事情。ID3算法，基础就是奥卡姆剃刀原理：越是小型的决策树越优于大的决策树。尽管如此，也不总是生产最小的树形结构。
 - ID3核心思想就是**以信息增益来度量属性的选择**，**选择分裂后信息增益最大的属性进行分裂**。该算法采用自顶而下的贪婪搜索遍历可能的决策空间。
 
-奥卡姆剃刀原理：
+### 奥卡姆剃刀原理：
 - 简单有效原理
 - 常用于两种或两种以上假说的取舍上：
     - 如果对于同一现象有两种或多种不同的假说，我们**应当采取比较简单或可证伪的那一种**。
 
-ID3推荐：
+### ID3推荐：
 - good splits at the top
 - prefer correct over incorrect ones
 - prefer shorter trees over longer trees
 
+### information gain公式
 information gain：通过挑选特定属性获取信息量的数学方法。
 
-entropy： 测量随机性的一种方法。
-
-GAIN(S,A) = ENTROPY(S) - \sum_{v}^{ }\frac{\left | s_{v} \right |}{\left | S \right |}*ENTROPY(S_{V})
-
-$\sum_{v}^n$
+![gain公式](https://github.com/felix0913/felix0913.github.io/blob/master/_pic/gain%E5%85%AC%E5%BC%8F.jpg?raw=true)
 
 S: 我们需要查看的训练样本的集合
 A: 特定的特征
 
+### entropy公式
+entropy： 测量随机性的一种方法。
+
+![entropy公式](https://github.com/felix0913/felix0913.github.io/blob/master/_pic/entropy_formula.jpg?raw=true)
+
+### 决策树其他问题
+- 何时停止
+    - 所有条目被正确分类后停止（若有noise，则可能无法每个条目都被正确分类）
+    - no overfitting
+    - pruning  修剪
+在决策树中，通常算法overfit的原因是，这个决策树太大，太复杂。
+
+- does it make sense to repeat an attribute along a path in the tree?
+    - no
