@@ -41,7 +41,7 @@ classfiction 与 regression的比较见如下表格：
 ## 20 questions
 `20 questions` 是一个游戏，一个人脑海中想象一个事物，另一个人通过20个是非问题来确定这个事物是什么。
 
-###策略：
+### 策略：
 - 最开始问的问题需要尽可能缩小范围，如果最开始问的就是具体问题，如果回答“否”，则基本获取不到信息。
 - 问的问题的顺序可能不能颠倒。因为你下一个问题取决于上一个问题中获取的答案。
 
@@ -79,14 +79,18 @@ Loop
 information gain：通过挑选特定属性获取信息量的数学方法。
 
 ![gain公式](https://github.com/felix0913/felix0913.github.io/blob/master/_pic/gain%E5%85%AC%E5%BC%8F.jpg?raw=true)
+- S: 我们需要查看的训练样本的集合
+-  A: 特定的特征
 
-S: 我们需要查看的训练样本的集合
-A: 特定的特征
 
 ### entropy公式
 entropy： 测量随机性的一种方法。
 
 ![entropy公式](https://github.com/felix0913/felix0913.github.io/blob/master/_pic/entropy_formula.jpg?raw=true)
+
+- Pi是第i类中的样本占总样本数的比例，再对所有类的结果求和
+- 熵与数据单一性呈负相关
+- 极端情况下，所有样本属于同一类，熵为0。在另一种极端情况下，样本均匀分布在所有类中，熵为最大值1.0。
 
 ### 决策树其他问题
 - 何时停止
