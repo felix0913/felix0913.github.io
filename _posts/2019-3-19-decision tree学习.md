@@ -2,9 +2,10 @@
 layout: post
 title:  "decision tree学习"
 date:   2019-3-19 16:00
-categories: machine learning
+categories: MachineLearning
 tags: decisionTree ml
 ---
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 * content
 {:toc}
