@@ -2,7 +2,7 @@
 layout: post
 title:  "mapreduce任务启动时，报错YarnException Unauthorized request to start container"
 date:   2019-3-19 15:55
-categories: mapreduce
+categories: 大数据
 tags: mapreduce 报错
 ---
 
